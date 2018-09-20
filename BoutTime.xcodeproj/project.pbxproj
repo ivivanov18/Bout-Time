@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1D92EC2153D6090012EC80 /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D92EB2153D6090012EC80 /* HistoricalEvent.swift */; };
 		3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */; };
 		3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */; };
 		3A8AADCE1DF9B85E00A2B931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1D92EB2153D6090012EC80 /* HistoricalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEvent.swift; sourceTree = "<group>"; };
 		3A8AADC51DF9B85E00A2B931 /* SingleViewAppSwiftTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleViewAppSwiftTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
 				3A8AADD41DF9B85E00A2B931 /* Info.plist */,
+				2C1D92EB2153D6090012EC80 /* HistoricalEvent.swift */,
 			);
 			path = SingleViewAppSwiftTemplate;
 			sourceTree = "<group>";
@@ -207,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "SingleViewAppSwiftTemplate" */;
+			buildConfigurationList = 3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "BoutTime" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1D92EC2153D6090012EC80 /* HistoricalEvent.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
 			);
@@ -412,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SingleViewAppSwiftTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwiftTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivanivanov.BoutTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -424,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SingleViewAppSwiftTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwiftTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivanivanov.BoutTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -487,7 +491,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "SingleViewAppSwiftTemplate" */ = {
+		3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "BoutTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8AADEB1DF9B85E00A2B931 /* Debug */,
@@ -503,6 +507,7 @@
 				3A8AADEF1DF9B85E00A2B931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A8AADF01DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplateTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				3A8AADF21DF9B85E00A2B931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A8AADF31DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplateUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				3A8AADF51DF9B85E00A2B931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
