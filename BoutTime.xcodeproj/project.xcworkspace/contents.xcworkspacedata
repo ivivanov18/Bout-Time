@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/ivan/Documents/apps/TREEHOUSE/iOSTechDegree/Unit3/SingleViewAppSwiftTemplate/BoutTime.xcodeproj">
+      location = "self:/Users/ivan/Documents/apps/TREEHOUSE/iOSTechDegree/Unit3/BoutTime/BoutTime.xcodeproj">
    </FileRef>
 </Workspace>

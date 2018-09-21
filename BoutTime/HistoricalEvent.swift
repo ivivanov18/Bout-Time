@@ -10,7 +10,8 @@ import Foundation
 
 struct HistoricalEvent{
     
-    var description: String
-    var year: String
+    let description: String
+    let year: String
+    let url: String
     
 }
