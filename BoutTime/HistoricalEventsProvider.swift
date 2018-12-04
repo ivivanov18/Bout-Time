@@ -13,7 +13,6 @@ enum EventErrors: Error{
     case conversionFailure
 }
 
-
 class HistoricalEventsProvider{
     var historicalEvents: [HistoricalEvent]
     
@@ -21,7 +20,7 @@ class HistoricalEventsProvider{
         do{
             let dictionary = try PlistConverter.arrayOfdictionaries(fromFile: "HistoricalEvents", ofType: "plist")
             
-            let historicalEvents  = try EventsUnarchiver.events(from: dictionary)
+            let historicalEvents  = try EventsUnarchiver.makeEvents(from: dictionary)
             
             self.historicalEvents = historicalEvents
         }catch let error{
@@ -46,14 +45,16 @@ class PlistConverter{
 }
 
 class EventsUnarchiver{
-    static func events(from arrayOfdictionaries: [[String: String]]) throws -> [HistoricalEvent]{
+    static func makeEvents(from arrayOfdictionaries: [[String: String]]) throws -> [HistoricalEvent]{
         
         var events: [HistoricalEvent] = []
         
         for dictionary in arrayOfdictionaries{
             if let year = dictionary["year"], let event = dictionary["event"], let url = dictionary["url"]{
-                let historicalEvent = HistoricalEvent(description: event, year: year, url: url)
-                
+                let historicalEvent = HistoricalEvent(event: event, year: year, url: url)
+                print(historicalEvent.event)
+                print(historicalEvent.year)
+                print(historicalEvent.url)
                 events.append(historicalEvent)
             }
         }

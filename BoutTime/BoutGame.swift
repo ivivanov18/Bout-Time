@@ -17,7 +17,6 @@ protocol Game{
     var currentRound: Int {get set}
     var score: Int {get set}
     var timer: Int {get set}
-
 }
 
 
@@ -30,14 +29,15 @@ class BoutGame: Game{
     var historicalEvents: HistoricalEventsProvider
     
     init(totalRounds: Int, timer: Int){
-            guard let events = HistoricalEventsProvider() else{
-                fatalError()
-            }
-            self.historicalEvents = events
-            self.totalRounds = totalRounds
-            self.timer = timer
-            self.score = 0
-            self.currentRound = 1
-
+        guard let events = HistoricalEventsProvider() else{
+            fatalError()
+        }
+        self.historicalEvents = events
+        self.totalRounds = totalRounds
+        self.timer = timer
+        self.score = 0
+        self.currentRound = 1
     }
+    
+    
 }

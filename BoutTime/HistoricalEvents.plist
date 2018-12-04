@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>event</key>
-		<string>The beginning of First World War</string>
+		<string>Start of World War I</string>
 		<key>year</key>
 		<string>1914</string>
 		<key>url</key>
@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>event</key>
-		<string>The beginning of the Second World War</string>
+		<string>Start of World War II</string>
 		<key>year</key>
 		<string>1939</string>
 		<key>url</key>
@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>event</key>
-		<string>The creation of the United Nations</string>
+		<string>Creation of the United Nations</string>
 		<key>year</key>
 		<string>1945</string>
 		<key>url</key>
@@ -28,11 +28,140 @@
 	</dict>
 	<dict>
 		<key>event</key>
-		<string>The end of the Second World War</string>
+		<string>End of World War I</string>
 		<key>year</key>
-		<string>1945</string>
+		<string>1918</string>
 		<key>url</key>
-		<string>https://en.wikipedia.org/wiki/World_War_II</string>
+		<string>https://en.wikipedia.org/wiki/World_War_I</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Cuban Missile Crisis</string>
+		<key>year</key>
+		<string>1962</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Cuban_Missile_Crisis</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Chernobyl Nuclear Accident</string>
+		<key>year</key>
+		<string>1986</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Chernobyl_disaster</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Fall of the Berlin Wall</string>
+		<key>year</key>
+		<string>1990</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Berlin_Wall</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Attack on Pearl Harbor</string>
+		<key>year</key>
+		<string>1941</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Start of Great Depression - Wall Street stock market crash</string>
+		<key>year</key>
+		<string>1929</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Great_Depression</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Maastricht Treaty</string>
+		<key>year</key>
+		<string>1992</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Maastricht_Treaty</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>The Rome Treaties</string>
+		<key>year</key>
+		<string>1957</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Treaty_of_Rome</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>The Treaty of Lisbon</string>
+		<key>year</key>
+		<string>2007</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Treaty_of_Lisbon</string>
+	</dict>
+	<dict/>
+	<dict>
+		<key>event</key>
+		<string>Ireland, Denmark and UK join UE</string>
+		<key>year</key>
+		<string>1971</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Greece joins EU</string>
+		<key>year</key>
+		<string>1981</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Portugal and Spain join EU</string>
+		<key>year</key>
+		<string>1986</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Austria, Finland and Sweden join EU</string>
+		<key>year</key>
+		<string>1995</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Cyprus, the Czech Republic, Estonia, Hungary, Latvia, Lithuania, Malta, Poland, Slovakia and Slovenia join EU</string>
+		<key>year</key>
+		<string>2004</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Bulgaria and Romania join EU</string>
+		<key>year</key>
+		<string>2007</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Croatia joins EU</string>
+		<key>year</key>
+		<string>2013</string>
+		<key>url</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>11 EU countries adopt the euro currency</string>
+		<key>year</key>
+		<string>1999</string>
+		<key>url</key>
+		<string>https://fr.wikipedia.org/wiki/Euro</string>
 	</dict>
 </array>
 </plist>

@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SingleViewAppSwiftTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,7 +41,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7a-7l-Te5">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7a-7l-Te5">
                                                         <rect key="frame" x="290" y="0.0" width="30" height="120"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="tcC-q2-oCZ"/>
@@ -67,7 +67,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VtJ-Qe-Od7">
                                                         <rect key="frame" x="290" y="0.0" width="30" height="120"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpv-fS-6mZ">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpv-fS-6mZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="cEl-cq-bfF"/>
@@ -75,7 +75,7 @@
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s89-n4-Dmk">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s89-n4-Dmk">
                                                                 <rect key="frame" x="0.0" y="60" width="30" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="6Lo-xK-dKa"/>
@@ -103,7 +103,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eu1-1w-9aQ">
                                                         <rect key="frame" x="290" y="0.0" width="30" height="120"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHo-v1-jsh">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHo-v1-jsh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="5k7-Sy-WU2"/>
@@ -111,7 +111,7 @@
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-Ja-fXu">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-Ja-fXu">
                                                                 <rect key="frame" x="0.0" y="60" width="30" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="vHy-ph-Uyu"/>
@@ -137,7 +137,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGy-ua-yh8">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGy-ua-yh8">
                                                         <rect key="frame" x="290" y="0.0" width="30" height="120"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="o2B-Pd-f4k"/>

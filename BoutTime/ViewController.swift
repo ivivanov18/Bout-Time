@@ -16,12 +16,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondEventLabel: UILabel!
     @IBOutlet weak var thirdEventLabel: UILabel!
     @IBOutlet weak var fourthEventLabel: UILabel!
+
+    var game = BoutGame(totalRounds: 6, timer: 60)
     
-    let game = BoutGame(totalRounds: 6, timer: 60)
+    var event: HistoricalEventsProvider?
     
+    required init?(coder aDecoder: NSCoder) {
+        if let event = HistoricalEventsProvider(){
+            super.init(coder: aDecoder)
+            self.event = event
+        }
+        fatalError("Problem initializing")
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
+        //print("game:   \(event!.historicalEvents.count)")
     }
 
     override func didReceiveMemoryWarning() {

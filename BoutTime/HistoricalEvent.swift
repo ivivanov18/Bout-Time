@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct HistoricalEvent{
+
+protocol Event{
+    var event: String {get }
+    var year: String {get}
+    var url: String? {get }
     
-    let description: String
-    let year: String
-    let url: String
+}
+
+struct HistoricalEvent: Event{
+    
+    var event: String
+    var year: String
+    var url: String?
     
 }
