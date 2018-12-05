@@ -22,11 +22,13 @@ class ViewController: UIViewController {
     var event: HistoricalEventsProvider?
     
     required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
         if let event = HistoricalEventsProvider(){
-            super.init(coder: aDecoder)
             self.event = event
+        }else{
+            fatalError("problem loading file hence fatal error")
         }
-        fatalError("Problem initializing")
         
     }
     override func viewDidLoad() {
@@ -41,6 +43,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    @IBAction func exchangeEvents(_ sender: UIButton) {
+        if sender.tag == 1 {
+            print("Button on the top")
+        }
+        else if sender.tag == 2{
+            print("Second button from top")
+        }
+        else if sender.tag == 3{
+            print("Third button from top")
+        }
+        else if sender.tag == 4{
+            print("Fourth button from top")
+        }
+        else if sender.tag == 5{
+            print("Fifth button from top")
+        }
+        else{
+            print("First button from bottom or sixth from top")
+        }
+    }
 }
 

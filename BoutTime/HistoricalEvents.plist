@@ -163,5 +163,37 @@
 		<key>url</key>
 		<string>https://fr.wikipedia.org/wiki/Euro</string>
 	</dict>
+	<dict>
+		<key>event</key>
+		<string>Germany gets reunited</string>
+		<key>year</key>
+		<string>1990</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/German_reunification</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Construction of the Berlin Wall</string>
+		<key>year</key>
+		<string>1961</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Berlin_Wall</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Cuban Missile Crisis</string>
+		<key>year</key>
+		<string>1962</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Cuban_Missile_Crisis</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Treaty of Paris: The Coal and Steel Community gets created</string>
+		<key>year</key>
+		<string>1951</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Treaty_of_Paris_(1951)</string>
+	</dict>
 </array>
 </plist>

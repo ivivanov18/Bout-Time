@@ -48,6 +48,9 @@
                                                             <constraint firstAttribute="height" constant="120" id="yS9-qN-8jn"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="down_full"/>
+                                                        <connections>
+                                                            <action selector="exchangeEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGW-dE-FPI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -74,6 +77,9 @@
                                                                     <constraint firstAttribute="height" constant="60" id="fgr-jM-1D5"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
+                                                                <connections>
+                                                                    <action selector="exchangeEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOZ-dU-TBh"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s89-n4-Dmk">
                                                                 <rect key="frame" x="0.0" y="60" width="30" height="60"/>
@@ -82,6 +88,9 @@
                                                                     <constraint firstAttribute="height" constant="60" id="mv7-AO-9XH"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="down_half"/>
+                                                                <connections>
+                                                                    <action selector="exchangeEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWc-aw-1Ks"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -110,6 +119,9 @@
                                                                     <constraint firstAttribute="height" constant="60" id="Xb5-b2-5Za"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
+                                                                <connections>
+                                                                    <action selector="exchangeEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caq-ji-Cmc"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-Ja-fXu">
                                                                 <rect key="frame" x="0.0" y="60" width="30" height="60"/>
@@ -118,6 +130,9 @@
                                                                     <constraint firstAttribute="height" constant="60" id="zUh-Ct-AuK"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="down_half"/>
+                                                                <connections>
+                                                                    <action selector="exchangeEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfy-ds-XBU"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -144,6 +159,9 @@
                                                             <constraint firstAttribute="height" constant="120" id="z94-gm-y0x"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="up_full"/>
+                                                        <connections>
+                                                            <action selector="exchangeEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeM-nP-o0G"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

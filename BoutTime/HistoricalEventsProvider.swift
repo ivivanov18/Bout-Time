@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameKit
 
 enum EventErrors: Error{
     case invalidResource
@@ -24,9 +25,31 @@ class HistoricalEventsProvider{
             
             self.historicalEvents = historicalEvents
         }catch let error{
-            return nil
+            fatalError("\(error)")
         }
     }
+    
+    
+    // Function that returns an array with a given number of random historical
+    // events
+    func provide(numberOfRandomEvents: Int ) -> [HistoricalEvent]{
+        
+        var arrayOfRandomEvents = [HistoricalEvent]()
+
+        while(arrayOfRandomEvents.count != numberOfRandomEvents){
+            var indexOfRandomEvent: Int
+            var eventAtRandomIndex: HistoricalEvent
+            repeat{
+                indexOfRandomEvent = GKRandomSource.sharedRandom().nextInt(upperBound: historicalEvents.count)
+                eventAtRandomIndex = historicalEvents[indexOfRandomEvent]
+            }while(arrayOfRandomEvents.contains(where: {$0.event == eventAtRandomIndex.event}))
+            
+            arrayOfRandomEvents.append(eventAtRandomIndex)
+        }
+        
+        return arrayOfRandomEvents
+    }
+
 }
 
 
@@ -52,9 +75,9 @@ class EventsUnarchiver{
         for dictionary in arrayOfdictionaries{
             if let year = dictionary["year"], let event = dictionary["event"], let url = dictionary["url"]{
                 let historicalEvent = HistoricalEvent(event: event, year: year, url: url)
-                print(historicalEvent.event)
-                print(historicalEvent.year)
-                print(historicalEvent.url)
+//                print(historicalEvent.event)
+//                print(historicalEvent.year)
+//                print(historicalEvent.url)
                 events.append(historicalEvent)
             }
         }
@@ -62,3 +85,4 @@ class EventsUnarchiver{
         return events
     }
 }
+
