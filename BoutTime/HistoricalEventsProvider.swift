@@ -24,8 +24,8 @@ class HistoricalEventsProvider{
             let historicalEvents  = try EventsUnarchiver.makeEvents(from: dictionary)
             
             self.historicalEvents = historicalEvents
-        }catch let error{
-            fatalError("\(error)")
+        }catch{
+            return nil
         }
     }
     

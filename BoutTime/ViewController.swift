@@ -17,25 +17,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdEventLabel: UILabel!
     @IBOutlet weak var fourthEventLabel: UILabel!
 
-    var game = BoutGame(totalRounds: 6, timer: 60)
+    var game: BoutGame
     
     var event: HistoricalEventsProvider?
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-
-        if let event = HistoricalEventsProvider(){
-            self.event = event
-        }else{
-            fatalError("problem loading file hence fatal error")
+        do{
+            let boutGame = try BoutGame(totalRounds: 6, timer: 60)
+            self.game = boutGame
+            super.init(coder: aDecoder)
+        }catch let error{
+            fatalError("\(error)")
         }
-        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       
-        //print("game:   \(event!.historicalEvents.count)")
+        populateLabelWithHistoricalEvents()
+        game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4)
+        let result = game.checkHistoricalOrderCorrectness(of: game.historicalEventsForOneRound)
+        print("result : \(result)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,26 +44,82 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+
+    // TODO: refactor with one helper function
     @IBAction func exchangeEvents(_ sender: UIButton) {
         if sender.tag == 1 {
-            print("Button on the top")
+            let stringHelpingForInterchange = firstEventLabel.text
+            firstEventLabel.text = secondEventLabel.text
+            secondEventLabel.text = stringHelpingForInterchange
+            
+            let historicalEventForInterchange = game.historicalEventsForOneRound[0]
+            game.historicalEventsForOneRound[0] = game.historicalEventsForOneRound[1]
+            game.historicalEventsForOneRound[1] = historicalEventForInterchange
         }
         else if sender.tag == 2{
-            print("Second button from top")
+            let stringHelpingForInterchange = firstEventLabel.text
+            firstEventLabel.text = secondEventLabel.text
+            secondEventLabel.text = stringHelpingForInterchange
+            
+            let historicalEventForInterchange = game.historicalEventsForOneRound[0]
+            game.historicalEventsForOneRound[0] = game.historicalEventsForOneRound[1]
+            game.historicalEventsForOneRound[1] = historicalEventForInterchange
         }
         else if sender.tag == 3{
-            print("Third button from top")
+            let stringHelpingForInterchange = secondEventLabel.text
+            secondEventLabel.text = thirdEventLabel.text
+            thirdEventLabel.text = stringHelpingForInterchange
+            
+            let historicalEventForInterchange = game.historicalEventsForOneRound[1]
+            game.historicalEventsForOneRound[1] = game.historicalEventsForOneRound[2]
+            game.historicalEventsForOneRound[2] = historicalEventForInterchange
         }
         else if sender.tag == 4{
-            print("Fourth button from top")
+            let stringHelpingForInterchange = secondEventLabel.text
+            secondEventLabel.text = thirdEventLabel.text
+            thirdEventLabel.text = stringHelpingForInterchange
+            
+            let historicalEventForInterchange = game.historicalEventsForOneRound[1]
+            game.historicalEventsForOneRound[1] = game.historicalEventsForOneRound[2]
+            game.historicalEventsForOneRound[2] = historicalEventForInterchange
         }
         else if sender.tag == 5{
-            print("Fifth button from top")
+            let stringHelpingForInterchange = thirdEventLabel.text
+            thirdEventLabel.text = fourthEventLabel.text
+            fourthEventLabel.text = stringHelpingForInterchange
+            
+            let historicalEventForInterchange = game.historicalEventsForOneRound[2]
+            game.historicalEventsForOneRound[2] = game.historicalEventsForOneRound[3]
+            game.historicalEventsForOneRound[3] = historicalEventForInterchange
         }
         else{
-            print("First button from bottom or sixth from top")
+            let stringHelpingForInterchange = thirdEventLabel.text
+            thirdEventLabel.text = fourthEventLabel.text
+            fourthEventLabel.text = stringHelpingForInterchange
+            
+            let historicalEventForInterchange = game.historicalEventsForOneRound[2]
+            game.historicalEventsForOneRound[2] = game.historicalEventsForOneRound[3]
+            game.historicalEventsForOneRound[3] = historicalEventForInterchange
         }
     }
+    
+    // Helper function
+    func populateLabelWithHistoricalEvents(){
+        game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4);
+        firstEventLabel.text = game.historicalEventsForOneRound[0].event + " " + game.historicalEventsForOneRound[0].year
+        secondEventLabel.text = game.historicalEventsForOneRound[1].event + " " + game.historicalEventsForOneRound[1].year
+        thirdEventLabel.text = game.historicalEventsForOneRound[2].event + " " + game.historicalEventsForOneRound[2].year
+        fourthEventLabel.text = game.historicalEventsForOneRound[3].event + " " + game.historicalEventsForOneRound[3].year
+    }
+//    
+//    // Helper function
+//    func makeArrayOfEventsFromLabels() -> [String]?{
+//        if let firstEventLabelTxt = firstEventLabel.text, let secondEventLabelTxt = secondEventLabel.text, let thirdEventLabelTxt = thirdEventLabel.text, let fourthEventLabelTxt = fourthEventLabel.text {
+//            return [firstEventLabelTxt, secondEventLabelTxt, thirdEventLabelTxt, fourthEventLabelTxt]
+//        }else{
+//            return nil
+//        }
+//    }
+    
 }
 
