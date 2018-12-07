@@ -16,15 +16,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondEventLabel: UILabel!
     @IBOutlet weak var thirdEventLabel: UILabel!
     @IBOutlet weak var fourthEventLabel: UILabel!
-
+    @IBOutlet weak var timerLabel: UILabel!
+    
     var game: BoutGame
     
     var event: HistoricalEventsProvider?
+    // https://teamtreehouse.com/community/swift-countdown-timer-of-60-seconds
+    var countDownTimer: Timer!
+    var totalTime: Int
     
     required init?(coder aDecoder: NSCoder) {
         do{
             let boutGame = try BoutGame(totalRounds: 6, timer: 60)
             self.game = boutGame
+            self.totalTime = boutGame.timer
             super.init(coder: aDecoder)
         }catch let error{
             fatalError("\(error)")
@@ -37,6 +42,7 @@ class ViewController: UIViewController {
         game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4)
         let result = game.checkHistoricalOrderCorrectness(of: game.historicalEventsForOneRound)
         print("result : \(result)")
+        startTimer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -111,15 +117,31 @@ class ViewController: UIViewController {
         thirdEventLabel.text = game.historicalEventsForOneRound[2].event + " " + game.historicalEventsForOneRound[2].year
         fourthEventLabel.text = game.historicalEventsForOneRound[3].event + " " + game.historicalEventsForOneRound[3].year
     }
-//    
-//    // Helper function
-//    func makeArrayOfEventsFromLabels() -> [String]?{
-//        if let firstEventLabelTxt = firstEventLabel.text, let secondEventLabelTxt = secondEventLabel.text, let thirdEventLabelTxt = thirdEventLabel.text, let fourthEventLabelTxt = fourthEventLabel.text {
-//            return [firstEventLabelTxt, secondEventLabelTxt, thirdEventLabelTxt, fourthEventLabelTxt]
-//        }else{
-//            return nil
-//        }
-//    }
     
+    // Code from Treehouse forum
+    func startTimer() {
+        countDownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime() {
+        timerLabel.text = "\(timeFormatted(totalTime))"
+        
+        if totalTime != 0 {
+            totalTime -= 1
+        } else {
+            endTimer()
+        }
+    }
+
+    func endTimer() {
+        countDownTimer.invalidate()
+    }
+    
+    // TODO: fix problem at start up of counter
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds
+        return String(format: "00:%02d", seconds)
+    }
+
 }
 

@@ -195,6 +195,7 @@
                         <outlet property="fourthEventLabel" destination="sfJ-wT-4gz" id="7QP-GO-Qmb"/>
                         <outlet property="secondEventLabel" destination="haK-L9-V52" id="vF2-SO-n8Y"/>
                         <outlet property="thirdEventLabel" destination="2ej-62-XlM" id="EpG-r8-mUe"/>
+                        <outlet property="timerLabel" destination="9yb-jS-mMa" id="GAY-9r-U29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
