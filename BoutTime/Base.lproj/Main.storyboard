@@ -30,7 +30,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14S-u5-1bu">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Y1-R9-ASr">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Y1-R9-ASr">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="120"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -57,7 +57,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4c-a6-2zD">
                                                 <rect key="frame" x="0.0" y="129" width="320" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haK-L9-V52">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haK-L9-V52">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="120"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -99,7 +99,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="po0-L9-FdY">
                                                 <rect key="frame" x="0.0" y="258" width="320" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ej-62-XlM">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ej-62-XlM">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="120"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -141,7 +141,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzf-EV-n7E">
                                                 <rect key="frame" x="0.0" y="387" width="320" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfJ-wT-4gz">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test event that took place somewhere between 1906 and 1908." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfJ-wT-4gz">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="120"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -167,20 +167,38 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yb-jS-mMa">
-                                        <rect key="frame" x="113.5" y="509" width="93" height="50.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-ap-DLf">
+                                        <rect key="frame" x="60" y="509" width="200" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruc-mZ-eRP">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="0Gg-jy-dc9"/>
+                                                    <constraint firstAttribute="width" constant="200" id="WpK-2O-NCp"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="vZJ-o4-Hdg"/>
+                                                    <constraint firstAttribute="height" constant="50" id="zym-fg-6FI"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="next_round_success">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi6-x8-OO8">
-                                        <rect key="frame" x="75.5" y="561.5" width="169" height="19"/>
+                                        <rect key="frame" x="75.5" y="561" width="169" height="19.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-zK-15I">
+                                <rect key="frame" x="153" y="565" width="69" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -191,11 +209,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonNextRound" destination="Ruc-mZ-eRP" id="8H1-XA-roK"/>
+                        <outlet property="fifthButtonFromTop" destination="fJg-Ja-fXu" id="hTS-Q5-zoB"/>
+                        <outlet property="firstButtonFromTop" destination="i7a-7l-Te5" id="CcD-xS-fJf"/>
                         <outlet property="firstEventLabel" destination="3Y1-R9-ASr" id="J6R-56-MGi"/>
+                        <outlet property="fourthButtonFromTop" destination="kHo-v1-jsh" id="99a-r5-wwU"/>
                         <outlet property="fourthEventLabel" destination="sfJ-wT-4gz" id="7QP-GO-Qmb"/>
+                        <outlet property="secondButtonFromTop" destination="kpv-fS-6mZ" id="2yr-gd-lZ1"/>
                         <outlet property="secondEventLabel" destination="haK-L9-V52" id="vF2-SO-n8Y"/>
+                        <outlet property="sixthButtonFromTop" destination="TGy-ua-yh8" id="34N-NY-Q9o"/>
+                        <outlet property="thirdButtonFromTop" destination="s89-n4-Dmk" id="2Ga-8S-54n"/>
                         <outlet property="thirdEventLabel" destination="2ej-62-XlM" id="EpG-r8-mUe"/>
-                        <outlet property="timerLabel" destination="9yb-jS-mMa" id="GAY-9r-U29"/>
+                        <outlet property="timerLabel" destination="551-zK-15I" id="Dhx-o2-wtN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -206,6 +231,7 @@
     <resources>
         <image name="down_full" width="158" height="457"/>
         <image name="down_half" width="158" height="229"/>
+        <image name="next_round_success" width="558" height="142"/>
         <image name="up_full" width="158" height="457"/>
         <image name="up_half" width="158" height="229"/>
     </resources>
