@@ -18,20 +18,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var firstButtonFromTop: UIButton!
-    
     @IBOutlet weak var secondButtonFromTop: UIButton!
-    
     @IBOutlet weak var thirdButtonFromTop: UIButton!
-    
     @IBOutlet weak var fourthButtonFromTop: UIButton!
-    
+    @IBOutlet weak var fifthButtonFromTop: UIButton!
     @IBOutlet weak var sixthButtonFromTop: UIButton!
     
-    
-    @IBOutlet weak var fifthButtonFromTop: UIButton!
-    
     var game: BoutGame
-    
     var event: HistoricalEventsProvider?
     // https://teamtreehouse.com/community/swift-countdown-timer-of-60-seconds
     var countDownTimer: Timer!
@@ -51,7 +44,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateLabelWithHistoricalEvents()
-//        game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4)
         game.endGameActionsDelegate = self
         let result = game.checkHistoricalOrderCorrectness(of: game.historicalEventsForOneRound)
         timerLabel.text = timeFormatted(game.timer)
@@ -137,7 +129,29 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func nextRound(_ sender: UIButton) {
+        // Interface
+        buttonNextRound.isHidden = true
+        timerLabel.isHidden = false
+        firstButtonFromTop.isEnabled = true
+        secondButtonFromTop.isEnabled = true
+        thirdButtonFromTop.isEnabled = true
+        fourthButtonFromTop.isEnabled = true
+        fifthButtonFromTop.isEnabled = true
+        sixthButtonFromTop.isEnabled = true
+        
+        // init, start counter
+        timerLabel.text = timeFormatted(game.timer)
+        self.totalTime = game.timer
+        startTimer()
+        
+        // get new questions and populate labels
+        populateLabelWithHistoricalEvents()
+        
+    }
+    
     // MARK: HELPER FUNCTIONS SECTION
+    // TODO: refactor events as arguments
     func populateLabelWithHistoricalEvents(){
         game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4);
         firstEventLabel.text = game.historicalEventsForOneRound[0].event + " " + game.historicalEventsForOneRound[0].year
@@ -145,8 +159,12 @@ class ViewController: UIViewController {
         thirdEventLabel.text = game.historicalEventsForOneRound[2].event + " " + game.historicalEventsForOneRound[2].year
         fourthEventLabel.text = game.historicalEventsForOneRound[3].event + " " + game.historicalEventsForOneRound[3].year
     }
+
+}
+
+// MARK: TIMER IMPLEMENTATION SECTION
+extension ViewController {
     
-    // MARK: TIMER IMPLEMENTATION SECTION
     func startTimer() {
         countDownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
@@ -160,7 +178,7 @@ class ViewController: UIViewController {
             endTimer()
         }
     }
-
+    
     func endTimer() {
         countDownTimer.invalidate()
         // Verify answers delegate
@@ -178,11 +196,9 @@ class ViewController: UIViewController {
     }
 }
 
-
+ // MARK: PROTOCOL IMPLEMENTATION SECTION
 extension ViewController: EndGameActionsDelegate {
-    
-    // MARK: PROTOCOL IMPLEMENTATION SECTION
-    // Fix: Refactor
+
     func roundDidFinish() {
         let isCorrectOrder = game.checkHistoricalOrderCorrectness(of: game.historicalEventsForOneRound)
         let nameOfImage: String = isCorrectOrder == true ? "next_round_success" : "next_round_fail"
@@ -197,6 +213,10 @@ extension ViewController: EndGameActionsDelegate {
         fifthButtonFromTop.isEnabled = false
         sixthButtonFromTop.isEnabled = false
         buttonNextRound.setImage(UIImage(named: nameOfImage)!, for: .normal)
+        
+        if isCorrectOrder{
+            game.correctAnswers += 1
+        }
 
     }
     
