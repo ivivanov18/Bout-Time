@@ -8,8 +8,12 @@
 
 import UIKit
 
+let NUMBER_OF_ROUNDS = 3
+let NUMBER_OF_SECONDS_FOR_TIMER = 15
+
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var firstEventLabel: UILabel!
     @IBOutlet weak var secondEventLabel: UILabel!
     @IBOutlet weak var thirdEventLabel: UILabel!
@@ -32,7 +36,7 @@ class ViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         do{
-            let boutGame = try BoutGame(totalRounds: 6, timer: 15)
+            let boutGame = try BoutGame(totalRounds: NUMBER_OF_ROUNDS, timer: NUMBER_OF_SECONDS_FOR_TIMER)
             self.game = boutGame
             self.totalTime = boutGame.timer
             super.init(coder: aDecoder)
@@ -182,7 +186,7 @@ extension ViewController {
     func endTimer() {
         countDownTimer.invalidate()
         // Verify answers delegate
-        if game.currentRound != 6 {
+        if game.currentRound != NUMBER_OF_ROUNDS {
             game.endGameActionsDelegate!.roundDidFinish()
         }else{
             game.endGameActionsDelegate!.gameDidFinish()
@@ -217,10 +221,14 @@ extension ViewController: EndGameActionsDelegate {
         if isCorrectOrder{
             game.correctAnswers += 1
         }
+        
+        game.currentRound += 1
 
     }
     
     func gameDidFinish() {
+        let endGameViewController = storyboard?.instantiateViewController(withIdentifier: "EndGameViewController") as! EndGameViewController
+        present(endGameViewController, animated: true, completion: nil)
         
     }
 }

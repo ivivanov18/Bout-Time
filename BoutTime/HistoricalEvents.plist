@@ -44,14 +44,6 @@
 	</dict>
 	<dict>
 		<key>event</key>
-		<string>Chernobyl Nuclear Accident</string>
-		<key>year</key>
-		<string>1986</string>
-		<key>url</key>
-		<string>https://en.wikipedia.org/wiki/Chernobyl_disaster</string>
-	</dict>
-	<dict>
-		<key>event</key>
 		<string>Fall of the Berlin Wall</string>
 		<key>year</key>
 		<string>1990</string>
@@ -98,7 +90,6 @@
 		<key>url</key>
 		<string>https://en.wikipedia.org/wiki/Treaty_of_Lisbon</string>
 	</dict>
-	<dict/>
 	<dict>
 		<key>event</key>
 		<string>Ireland, Denmark and UK join UE</string>
@@ -178,14 +169,6 @@
 		<string>1961</string>
 		<key>url</key>
 		<string>https://en.wikipedia.org/wiki/Berlin_Wall</string>
-	</dict>
-	<dict>
-		<key>event</key>
-		<string>Cuban Missile Crisis</string>
-		<key>year</key>
-		<string>1962</string>
-		<key>url</key>
-		<string>https://en.wikipedia.org/wiki/Cuban_Missile_Crisis</string>
 	</dict>
 	<dict>
 		<key>event</key>
