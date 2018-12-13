@@ -9,7 +9,13 @@
 import UIKit
 
 let NUMBER_OF_ROUNDS = 3
-let NUMBER_OF_SECONDS_FOR_TIMER = 15
+let NUMBER_OF_SECONDS_FOR_TIMER = 10
+
+struct DataEndGame{
+    let numberOfRounds: Int
+    let numberOfCorrectAnswers: Int
+}
+
 
 class ViewController: UIViewController {
 
@@ -227,7 +233,13 @@ extension ViewController: EndGameActionsDelegate {
     }
     
     func gameDidFinish() {
+        let isCorrectOrder = game.checkHistoricalOrderCorrectness(of: game.historicalEventsForOneRound)
+        
+        if isCorrectOrder{
+            game.correctAnswers += 1
+        }
         let endGameViewController = storyboard?.instantiateViewController(withIdentifier: "EndGameViewController") as! EndGameViewController
+        endGameViewController.dataEndGameToDisplay = DataEndGame(numberOfRounds: game.totalRounds, numberOfCorrectAnswers: game.correctAnswers)
         present(endGameViewController, animated: true, completion: nil)
         
     }
