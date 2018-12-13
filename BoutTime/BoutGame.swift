@@ -55,13 +55,13 @@ class BoutGame: Game{
         return currentRound > totalRounds ? true : false
     }
     
-    // TODO: Comment
+    // TODO: Refactor game initialization   
     func startGame(){
         correctAnswers = 0
         currentRound = 1
     }
     
-    //
+    // TODO: Improve error messages
     func checkHistoricalOrderCorrectness(of events: [HistoricalEvent]) -> Bool{
         for i in 0 ..< events.count - 1{
             if let firstEventYear = Int(events[i].year), let secondEventYear = Int(events[i+1].year){

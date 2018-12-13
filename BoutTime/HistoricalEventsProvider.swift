@@ -9,8 +9,6 @@
 import Foundation
 import GameKit
 
-// TODO: correct events with same dates in plist file
-
 enum EventErrors: Error{
     case invalidResource
     case conversionFailure
@@ -77,9 +75,6 @@ class EventsUnarchiver{
         for dictionary in arrayOfdictionaries{
             if let year = dictionary["year"], let event = dictionary["event"], let url = dictionary["url"]{
                 let historicalEvent = HistoricalEvent(event: event, year: year, url: url)
-//                print(historicalEvent.event)
-//                print(historicalEvent.year)
-//                print(historicalEvent.url)
                 events.append(historicalEvent)
             }
         }

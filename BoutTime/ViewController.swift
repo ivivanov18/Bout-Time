@@ -86,54 +86,34 @@ class ViewController: UIViewController {
             let stringHelpingForInterchange = firstEventLabel.text
             firstEventLabel.text = secondEventLabel.text
             secondEventLabel.text = stringHelpingForInterchange
-            
-//            let historicalEventForInterchange = game.historicalEventsForOneRound[0]
-//            game.historicalEventsForOneRound[0] = game.historicalEventsForOneRound[1]
-//            game.historicalEventsForOneRound[1] = historicalEventForInterchange
-            
-                        (game.historicalEventsForOneRound[0],  game.historicalEventsForOneRound[1]) = (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[0])
+
+            (game.historicalEventsForOneRound[0],  game.historicalEventsForOneRound[1]) = (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[0])
         }
         else if sender.tag == 3{
             let stringHelpingForInterchange = secondEventLabel.text
             secondEventLabel.text = thirdEventLabel.text
             thirdEventLabel.text = stringHelpingForInterchange
             
-//            let historicalEventForInterchange = game.historicalEventsForOneRound[1]
-//            game.historicalEventsForOneRound[1] = game.historicalEventsForOneRound[2]
-//            game.historicalEventsForOneRound[2] = historicalEventForInterchange
-            
-                        (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[2]) = (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[1])
+            (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[2]) = (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[1])
         }
         else if sender.tag == 4{
             let stringHelpingForInterchange = secondEventLabel.text
             secondEventLabel.text = thirdEventLabel.text
             thirdEventLabel.text = stringHelpingForInterchange
-            
-//            let historicalEventForInterchange = game.historicalEventsForOneRound[1]
-//            game.historicalEventsForOneRound[1] = game.historicalEventsForOneRound[2]
-//            game.historicalEventsForOneRound[2] = historicalEventForInterchange
-            
-                                    (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[2]) = (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[1])
+
+            (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[2]) = (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[1])
         }
         else if sender.tag == 5{
             let stringHelpingForInterchange = thirdEventLabel.text
             thirdEventLabel.text = fourthEventLabel.text
             fourthEventLabel.text = stringHelpingForInterchange
             
-//            let historicalEventForInterchange = game.historicalEventsForOneRound[2]
-//            game.historicalEventsForOneRound[2] = game.historicalEventsForOneRound[3]
-//            game.historicalEventsForOneRound[3] = historicalEventForInterchange
-            
-                                    (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[3]) = (game.historicalEventsForOneRound[3],  game.historicalEventsForOneRound[2])
+            (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[3]) = (game.historicalEventsForOneRound[3],  game.historicalEventsForOneRound[2])
         }
         else{
             let stringHelpingForInterchange = thirdEventLabel.text
             thirdEventLabel.text = fourthEventLabel.text
             fourthEventLabel.text = stringHelpingForInterchange
-//
-//            let historicalEventForInterchange = game.historicalEventsForOneRound[2]
-//            game.historicalEventsForOneRound[2] = game.historicalEventsForOneRound[3]
-//            game.historicalEventsForOneRound[3] = historicalEventForInterchange
             
             (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[3]) = (game.historicalEventsForOneRound[3],  game.historicalEventsForOneRound[2])
         }
@@ -238,6 +218,7 @@ extension ViewController: EndGameActionsDelegate {
         if isCorrectOrder{
             game.correctAnswers += 1
         }
+        
         let endGameViewController = storyboard?.instantiateViewController(withIdentifier: "EndGameViewController") as! EndGameViewController
         endGameViewController.dataEndGameToDisplay = DataEndGame(numberOfRounds: game.totalRounds, numberOfCorrectAnswers: game.correctAnswers)
         present(endGameViewController, animated: true, completion: nil)
