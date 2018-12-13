@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1D92EC2153D6090012EC80 /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D92EB2153D6090012EC80 /* HistoricalEvent.swift */; };
+		2C296D1521C05C2300F68A8E /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C296D1421C05C2300F68A8E /* EndGameViewController.swift */; };
 		2CC72B332154DCBF0058B842 /* HistoricalEvents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CC72B322154DCBF0058B842 /* HistoricalEvents.plist */; };
 		2CC72B3521551B8B0058B842 /* BoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC72B3421551B8B0058B842 /* BoutGame.swift */; };
 		2CC72B3721551BDD0058B842 /* HistoricalEventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC72B3621551BDD0058B842 /* HistoricalEventsProvider.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2C1D92EB2153D6090012EC80 /* HistoricalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEvent.swift; sourceTree = "<group>"; };
+		2C296D1421C05C2300F68A8E /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 		2CC72B322154DCBF0058B842 /* HistoricalEvents.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HistoricalEvents.plist; sourceTree = "<group>"; };
 		2CC72B3421551B8B0058B842 /* BoutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutGame.swift; sourceTree = "<group>"; };
 		2CC72B3621551BDD0058B842 /* HistoricalEventsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsProvider.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */,
 				3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */,
 				3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */,
+				2C296D1421C05C2300F68A8E /* EndGameViewController.swift */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
 				3A8AADD41DF9B85E00A2B931 /* Info.plist */,
@@ -248,6 +251,7 @@
 			files = (
 				2C1D92EC2153D6090012EC80 /* HistoricalEvent.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
+				2C296D1521C05C2300F68A8E /* EndGameViewController.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
 				2CC72B3721551BDD0058B842 /* HistoricalEventsProvider.swift in Sources */,
 				2CC72B3521551B8B0058B842 /* BoutGame.swift in Sources */,

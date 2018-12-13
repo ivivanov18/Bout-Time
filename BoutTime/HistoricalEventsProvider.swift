@@ -9,6 +9,8 @@
 import Foundation
 import GameKit
 
+// TODO: correct events with same dates in plist file
+
 enum EventErrors: Error{
     case invalidResource
     case conversionFailure
