@@ -84,14 +84,6 @@
 	</dict>
 	<dict>
 		<key>event</key>
-		<string>The Treaty of Lisbon</string>
-		<key>year</key>
-		<string>2007</string>
-		<key>url</key>
-		<string>https://en.wikipedia.org/wiki/Treaty_of_Lisbon</string>
-	</dict>
-	<dict>
-		<key>event</key>
 		<string>Ireland, Denmark and UK join UE</string>
 		<key>year</key>
 		<string>1971</string>
