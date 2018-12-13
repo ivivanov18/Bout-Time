@@ -14,6 +14,7 @@ let NUMBER_OF_SECONDS_FOR_TIMER = 10
 struct DataEndGame{
     let numberOfRounds: Int
     let numberOfCorrectAnswers: Int
+    let initGameDelegate: InitGameDelegate
 }
 
 
@@ -186,7 +187,7 @@ extension ViewController {
     }
 }
 
- // MARK: PROTOCOL IMPLEMENTATION SECTION
+ // MARK: EndGameActionsDelegate PROTOCOL IMPLEMENTATION SECTION
 extension ViewController: EndGameActionsDelegate {
 
     func roundDidFinish() {
@@ -220,9 +221,33 @@ extension ViewController: EndGameActionsDelegate {
         }
         
         let endGameViewController = storyboard?.instantiateViewController(withIdentifier: "EndGameViewController") as! EndGameViewController
-        endGameViewController.dataEndGameToDisplay = DataEndGame(numberOfRounds: game.totalRounds, numberOfCorrectAnswers: game.correctAnswers)
+        endGameViewController.dataEndGameToDisplay = DataEndGame(numberOfRounds: game.totalRounds, numberOfCorrectAnswers: game.correctAnswers, initGameDelegate: self)
         present(endGameViewController, animated: true, completion: nil)
         
+    }
+}
+
+// MARK: InitGameDelegate PROTOCOL IMPLEMENTATION SECTION
+extension ViewController: InitGameDelegate{
+    func initGame() {
+        game.correctAnswers = 0
+        game.currentRound = 1
+        populateLabelWithHistoricalEvents()
+        timerLabel.text = timeFormatted(game.timer)
+        self.totalTime = game.timer
+        startTimer()
+    }
+}
+
+extension ViewController{
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake{
+            self.endTimer()
+        }
     }
 }
 

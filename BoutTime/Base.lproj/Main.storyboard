@@ -168,14 +168,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-ap-DLf">
-                                        <rect key="frame" x="60" y="509" width="200" height="50"/>
+                                        <rect key="frame" x="80" y="509" width="160" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruc-mZ-eRP">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="0Gg-jy-dc9"/>
-                                                    <constraint firstAttribute="width" constant="200" id="WpK-2O-NCp"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="vZJ-o4-Hdg"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="E6c-5S-rLi"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="cVm-17-Cpx"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="nXz-fb-dKh"/>
                                                     <constraint firstAttribute="height" constant="50" id="zym-fg-6FI"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="next_round_success">
