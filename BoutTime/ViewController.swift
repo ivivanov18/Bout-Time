@@ -37,7 +37,6 @@ class ViewController: UIViewController {
     
     var game: BoutGame
     var event: HistoricalEventsProvider?
-    // https://teamtreehouse.com/community/swift-countdown-timer-of-60-seconds
     var countDownTimer: Timer!
     var totalTime: Int
     
@@ -56,67 +55,40 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         populateLabelWithHistoricalEvents()
         game.endGameActionsDelegate = self
-        let result = game.checkHistoricalOrderCorrectness(of: game.historicalEventsForOneRound)
         timerLabel.text = timeFormatted(game.timer)
-        print("result : \(result)")
         startTimer()
         buttonNextRound.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: ACTIONS SECTION
-    // TODO: refactor with one helper function
     @IBAction func exchangeEvents(_ sender: UIButton) {
-        print(game.historicalEventsForOneRound)
         if sender.tag == 1 {
-            let stringHelpingForInterchange = firstEventLabel.text
-            firstEventLabel.text = secondEventLabel.text
-            secondEventLabel.text = stringHelpingForInterchange
-            
-//            let historicalEventForInterchange = game.historicalEventsForOneRound[0]
-//            game.historicalEventsForOneRound[0] = game.historicalEventsForOneRound[1]
-//            game.historicalEventsForOneRound[1] = historicalEventForInterchange
-//
-            (game.historicalEventsForOneRound[0],  game.historicalEventsForOneRound[1]) = (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[0])
+            swapTextField(of: firstEventLabel, withTextFieldOf: secondEventLabel)
+            swapElementAtIndex(0, withElementFromIndex: 1)
         }
         else if sender.tag == 2{
-            let stringHelpingForInterchange = firstEventLabel.text
-            firstEventLabel.text = secondEventLabel.text
-            secondEventLabel.text = stringHelpingForInterchange
-
-            (game.historicalEventsForOneRound[0],  game.historicalEventsForOneRound[1]) = (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[0])
+            swapTextField(of: firstEventLabel, withTextFieldOf: secondEventLabel)
+            swapElementAtIndex(0, withElementFromIndex: 1)
         }
         else if sender.tag == 3{
-            let stringHelpingForInterchange = secondEventLabel.text
-            secondEventLabel.text = thirdEventLabel.text
-            thirdEventLabel.text = stringHelpingForInterchange
-            
-            (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[2]) = (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[1])
+            swapTextField(of: secondEventLabel, withTextFieldOf: thirdEventLabel)
+            swapElementAtIndex(1, withElementFromIndex: 2)
         }
         else if sender.tag == 4{
-            let stringHelpingForInterchange = secondEventLabel.text
-            secondEventLabel.text = thirdEventLabel.text
-            thirdEventLabel.text = stringHelpingForInterchange
-
-            (game.historicalEventsForOneRound[1],  game.historicalEventsForOneRound[2]) = (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[1])
+            swapTextField(of: secondEventLabel, withTextFieldOf: thirdEventLabel)
+            swapElementAtIndex(1, withElementFromIndex: 2)
         }
         else if sender.tag == 5{
-            let stringHelpingForInterchange = thirdEventLabel.text
-            thirdEventLabel.text = fourthEventLabel.text
-            fourthEventLabel.text = stringHelpingForInterchange
-            
-            (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[3]) = (game.historicalEventsForOneRound[3],  game.historicalEventsForOneRound[2])
+            swapTextField(of: thirdEventLabel, withTextFieldOf: fourthEventLabel)
+            swapElementAtIndex(2, withElementFromIndex: 3)
         }
         else{
-            let stringHelpingForInterchange = thirdEventLabel.text
-            thirdEventLabel.text = fourthEventLabel.text
-            fourthEventLabel.text = stringHelpingForInterchange
-            
-            (game.historicalEventsForOneRound[2],  game.historicalEventsForOneRound[3]) = (game.historicalEventsForOneRound[3],  game.historicalEventsForOneRound[2])
+            swapTextField(of: thirdEventLabel, withTextFieldOf: fourthEventLabel)
+            swapElementAtIndex(2, withElementFromIndex: 3)
         }
     }
     
@@ -143,6 +115,7 @@ class ViewController: UIViewController {
     
     // MARK: HELPER FUNCTIONS SECTION
     // TODO: refactor events as arguments
+    // TODO: delete year hint at end
     func populateLabelWithHistoricalEvents(){
         game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4);
         firstEventLabel.text = game.historicalEventsForOneRound[0].event + " " + game.historicalEventsForOneRound[0].year
@@ -150,10 +123,23 @@ class ViewController: UIViewController {
         thirdEventLabel.text = game.historicalEventsForOneRound[2].event + " " + game.historicalEventsForOneRound[2].year
         fourthEventLabel.text = game.historicalEventsForOneRound[3].event + " " + game.historicalEventsForOneRound[3].year
     }
-
+    
+    func swapElementAtIndex(_ index: Int, withElementFromIndex fromIndex: Int){
+        
+         (game.historicalEventsForOneRound[index],  game.historicalEventsForOneRound[fromIndex]) = (game.historicalEventsForOneRound[fromIndex], game.historicalEventsForOneRound[index])
+    }
+    
+    
+    func swapTextField(of firstLabel: UILabel, withTextFieldOf secondLabel: UILabel){
+        let stringHelpingForInterchange = firstLabel.text
+        firstLabel.text = secondLabel.text
+        secondLabel.text = stringHelpingForInterchange
+    }
+    
 }
 
 // MARK: TIMER IMPLEMENTATION SECTION
+// Code from TREEHOUSE FORUM https://teamtreehouse.com/community/swift-countdown-timer-of-60-seconds
 extension ViewController {
     
     func startTimer() {
@@ -167,20 +153,15 @@ extension ViewController {
             totalTime -= 1
         } else {
             endTimer()
+            endRound()
         }
     }
     
     func endTimer() {
         countDownTimer.invalidate()
-        // Verify answers delegate
-        if game.currentRound != NUMBER_OF_ROUNDS {
-            game.endGameActionsDelegate!.roundDidFinish()
-        }else{
-            game.endGameActionsDelegate!.gameDidFinish()
-        }
+
     }
     
-    // TODO: fix problem at start up of counter
     func timeFormatted(_ totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds
         return String(format: "00:%02d", seconds)
@@ -225,6 +206,15 @@ extension ViewController: EndGameActionsDelegate {
         present(endGameViewController, animated: true, completion: nil)
         
     }
+    
+    func endRound(){
+        // Verify answers delegate
+        if game.currentRound != NUMBER_OF_ROUNDS {
+            game.endGameActionsDelegate!.roundDidFinish()
+        }else{
+            game.endGameActionsDelegate!.gameDidFinish()
+        }
+    }
 }
 
 // MARK: InitGameDelegate PROTOCOL IMPLEMENTATION SECTION
@@ -239,6 +229,7 @@ extension ViewController: InitGameDelegate{
     }
 }
 
+// MARK: ADD SHAKE MOTION DETECTION
 extension ViewController{
     override func becomeFirstResponder() -> Bool {
         return true
@@ -246,7 +237,8 @@ extension ViewController{
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake{
-            self.endTimer()
+            endTimer()
+            endRound()
         }
     }
 }

@@ -65,22 +65,15 @@ class BoutGame: Game{
     func checkHistoricalOrderCorrectness(of events: [HistoricalEvent]) -> Bool{
         for i in 0 ..< events.count - 1{
             if let firstEventYear = Int(events[i].year), let secondEventYear = Int(events[i+1].year){
-                print("First: \(firstEventYear), Second: \(secondEventYear)")
                 if firstEventYear < secondEventYear{
-                    print("continue")
                     continue
                 }else{
-                    print("false")
                     return false
                 }
             }else{
-                print("False in unwrapping")
-                print("false")
-
                 return false
             }
         }
-        print("true")
         return true
     }
 

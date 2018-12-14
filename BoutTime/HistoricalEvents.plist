@@ -20,11 +20,11 @@
 	</dict>
 	<dict>
 		<key>event</key>
-		<string>Creation of the United Nations</string>
+		<string>End of World War II</string>
 		<key>year</key>
 		<string>1945</string>
 		<key>url</key>
-		<string>https://en.wikipedia.org/wiki/United_Nations</string>
+		<string>https://en.wikipedia.org/wiki/World_War_II</string>
 	</dict>
 	<dict>
 		<key>event</key>
@@ -169,6 +169,46 @@
 		<string>1951</string>
 		<key>url</key>
 		<string>https://en.wikipedia.org/wiki/Treaty_of_Paris_(1951)</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Margaret Thatcher becomes Prime Minister of United Kingdom</string>
+		<key>year</key>
+		<string>1979</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Margaret_Thatcher</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Battle of Waterloo</string>
+		<key>year</key>
+		<string>1815</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Battle_of_Waterloo</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Norway becomes independent from Sweden</string>
+		<key>year</key>
+		<string>1905</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Dissolution_of_the_union_between_Norway_and_Sweden</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Bulgaria becomes independant from Turkey</string>
+		<key>year</key>
+		<string>1908</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Bulgarian_Declaration_of_Independence</string>
+	</dict>
+	<dict>
+		<key>event</key>
+		<string>Alexander Fleming discovers penicillin </string>
+		<key>year</key>
+		<string>1928</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Penicillin</string>
 	</dict>
 </array>
 </plist>
