@@ -71,26 +71,38 @@ class ViewController: UIViewController {
     // MARK: ACTIONS SECTION
     @IBAction func exchangeEvents(_ sender: UIButton) {
         if sender.tag == 1 {
+            sender.setImage(UIImage(named: "down_full_selected" )!, for: .highlighted )
+            
             swapTextField(of: firstEventLabel, withTextFieldOf: secondEventLabel)
             swapElementAtIndex(0, withElementFromIndex: 1)
         }
         else if sender.tag == 2{
+            sender.setImage(UIImage(named: "up_half_selected" )!, for: .highlighted )
+            
             swapTextField(of: firstEventLabel, withTextFieldOf: secondEventLabel)
             swapElementAtIndex(0, withElementFromIndex: 1)
         }
         else if sender.tag == 3{
+            sender.setImage(UIImage(named: "down_half_selected" )!, for: .highlighted )
+
             swapTextField(of: secondEventLabel, withTextFieldOf: thirdEventLabel)
             swapElementAtIndex(1, withElementFromIndex: 2)
         }
         else if sender.tag == 4{
+            sender.setImage(UIImage(named: "up_half_selected" )!, for: .highlighted )
+            
             swapTextField(of: secondEventLabel, withTextFieldOf: thirdEventLabel)
             swapElementAtIndex(1, withElementFromIndex: 2)
         }
         else if sender.tag == 5{
+            sender.setImage(UIImage(named: "down_half_selected" )!, for: .highlighted )
+            
             swapTextField(of: thirdEventLabel, withTextFieldOf: fourthEventLabel)
             swapElementAtIndex(2, withElementFromIndex: 3)
         }
         else{
+            sender.setImage(UIImage(named: "up_full_selected" )!, for: .highlighted )
+
             swapTextField(of: thirdEventLabel, withTextFieldOf: fourthEventLabel)
             swapElementAtIndex(2, withElementFromIndex: 3)
         }
