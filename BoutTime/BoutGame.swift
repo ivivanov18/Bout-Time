@@ -16,7 +16,6 @@ protocol Game{
     var totalRounds: Int {get}
     var currentRound: Int {get set}
     var correctAnswers: Int {get set}
-    var timer: Int {get set}
 }
 
 protocol EndGameActionsDelegate{
@@ -29,6 +28,7 @@ class BoutGame: Game{
     var currentRound: Int
     var correctAnswers: Int
     var timer: Int
+    var isRoundOver: Bool
     
     var endGameActionsDelegate: EndGameActionsDelegate?
     
@@ -47,6 +47,7 @@ class BoutGame: Game{
         self.correctAnswers = 0
         self.currentRound = 1
         self.historicalEventsForOneRound = []
+        self.isRoundOver = false
     }
     
     // Function that checks whether game is over or not

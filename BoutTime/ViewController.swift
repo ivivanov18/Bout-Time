@@ -53,10 +53,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         populateLabelWithHistoricalEvents()
+        
         game.endGameActionsDelegate = self
+        
         timerLabel.text = timeFormatted(game.timer)
         startTimer()
+        
         buttonNextRound.isHidden = true
     }
 
@@ -103,6 +107,8 @@ class ViewController: UIViewController {
         fifthButtonFromTop.isEnabled = true
         sixthButtonFromTop.isEnabled = true
         
+        game.isRoundOver = false
+        
         // init, start counter
         timerLabel.text = timeFormatted(game.timer)
         self.totalTime = game.timer
@@ -114,7 +120,6 @@ class ViewController: UIViewController {
     }
     
     // MARK: HELPER FUNCTIONS SECTION
-    // TODO: refactor events as arguments
     // TODO: delete year hint at end
     func populateLabelWithHistoricalEvents(){
         game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4);
@@ -209,6 +214,7 @@ extension ViewController: EndGameActionsDelegate {
     
     func endRound(){
         // Verify answers delegate
+        game.isRoundOver = true
         if game.currentRound != NUMBER_OF_ROUNDS {
             game.endGameActionsDelegate!.roundDidFinish()
         }else{
@@ -222,6 +228,7 @@ extension ViewController: InitGameDelegate{
     func initGame() {
         game.correctAnswers = 0
         game.currentRound = 1
+        game.isRoundOver = false
         populateLabelWithHistoricalEvents()
         timerLabel.text = timeFormatted(game.timer)
         self.totalTime = game.timer
@@ -236,7 +243,7 @@ extension ViewController{
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if motion == .motionShake{
+        if motion == .motionShake && !game.isRoundOver{
             endTimer()
             endRound()
         }
