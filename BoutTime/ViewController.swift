@@ -8,8 +8,8 @@
 
 import UIKit
 
-let NUMBER_OF_ROUNDS = 3
-let NUMBER_OF_SECONDS_FOR_TIMER = 10
+let NUMBER_OF_ROUNDS = 6
+let NUMBER_OF_SECONDS_FOR_TIMER = 60
 
 struct DataEndGame{
     let numberOfRounds: Int
@@ -135,10 +135,10 @@ class ViewController: UIViewController {
     // TODO: delete year hint at end
     func populateLabelWithHistoricalEvents(){
         game.historicalEventsForOneRound = game.historicalEvents.provide(numberOfRandomEvents: 4);
-        firstEventLabel.text = game.historicalEventsForOneRound[0].event + " " + game.historicalEventsForOneRound[0].year
-        secondEventLabel.text = game.historicalEventsForOneRound[1].event + " " + game.historicalEventsForOneRound[1].year
-        thirdEventLabel.text = game.historicalEventsForOneRound[2].event + " " + game.historicalEventsForOneRound[2].year
-        fourthEventLabel.text = game.historicalEventsForOneRound[3].event + " " + game.historicalEventsForOneRound[3].year
+        firstEventLabel.text = game.historicalEventsForOneRound[0].event
+        secondEventLabel.text = game.historicalEventsForOneRound[1].event
+        thirdEventLabel.text = game.historicalEventsForOneRound[2].event
+        fourthEventLabel.text = game.historicalEventsForOneRound[3].event
     }
     
     func swapElementAtIndex(_ index: Int, withElementFromIndex fromIndex: Int){
