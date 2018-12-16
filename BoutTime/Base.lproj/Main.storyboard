@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fNA-ph-Y3C">
-                                <rect key="frame" x="27" y="43.5" width="320" height="580.5"/>
+                                <rect key="frame" x="27" y="30" width="320" height="607"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="jBd-3e-XRZ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="507"/>
@@ -168,7 +168,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-ap-DLf">
-                                        <rect key="frame" x="80" y="509" width="160" height="50"/>
+                                        <rect key="frame" x="80" y="520.5" width="160" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruc-mZ-eRP">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -189,16 +189,18 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi6-x8-OO8">
-                                        <rect key="frame" x="79" y="561" width="162.5" height="19.5"/>
+                                        <rect key="frame" x="79" y="584" width="162.5" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="textColor" red="0.086571796368113879" green="0.41169976582957668" blue="0.69907994923857864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-zK-15I">
-                                <rect key="frame" x="153" y="565" width="69" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-zK-15I">
+                                <rect key="frame" x="153" y="564" width="69" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="2zT-KY-6BB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,9 +209,11 @@
                         <color key="backgroundColor" red="0.0559625708099665" green="0.19056549152242525" blue="0.31757614213197971" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fNA-ph-Y3C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="04m-4c-SC6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="551-zK-15I" secondAttribute="bottom" constant="80" id="Adz-z4-ZJs"/>
+                            <constraint firstItem="551-zK-15I" firstAttribute="centerX" secondItem="fNA-ph-Y3C" secondAttribute="centerX" id="JWD-l2-ie6"/>
                             <constraint firstItem="fNA-ph-Y3C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="khU-VA-FvV"/>
-                            <constraint firstItem="fNA-ph-Y3C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23.5" id="pY5-gv-Cxy"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fNA-ph-Y3C" secondAttribute="bottom" constant="43" id="uWw-w6-14B"/>
+                            <constraint firstItem="551-zK-15I" firstAttribute="top" secondItem="sfJ-wT-4gz" secondAttribute="bottom" constant="27" id="lj6-NK-Dgv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fNA-ph-Y3C" secondAttribute="bottom" constant="30" id="uWw-w6-14B"/>
                         </constraints>
                     </view>
                     <connections>
