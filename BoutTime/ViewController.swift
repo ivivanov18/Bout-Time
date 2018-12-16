@@ -8,7 +8,7 @@
 
 import UIKit
 
-let NUMBER_OF_ROUNDS = 6
+let NUMBER_OF_ROUNDS = 2
 let NUMBER_OF_SECONDS_FOR_TIMER = 60
 
 struct DataEndGame{

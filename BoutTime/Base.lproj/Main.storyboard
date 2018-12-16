@@ -243,30 +243,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdj-a7-yam">
-                                <rect key="frame" x="58" y="239" width="259" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIG-c9-byT">
-                                <rect key="frame" x="129" y="226" width="117" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIG-c9-byT">
+                                <rect key="frame" x="137" y="214" width="101" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.086571796368113879" green="0.41169976582957668" blue="0.69907994923857864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neD-SM-31o">
-                                <rect key="frame" x="120" y="384" width="135" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neD-SM-31o">
+                                <rect key="frame" x="120" y="392" width="135" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="cef-Cs-M50"/>
+                                    <constraint firstAttribute="width" constant="135" id="o8k-HT-PPa"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="play_again"/>
                                 <connections>
                                     <action selector="playAgain:" destination="qK4-eP-k8D" eventType="touchUpInside" id="cyB-uu-vGY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdj-a7-yam">
+                                <rect key="frame" x="123" y="263" width="129" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0559625708099665" green="0.19056549152242525" blue="0.31757614213197971" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="neD-SM-31o" firstAttribute="top" secondItem="Jdj-a7-yam" secondAttribute="bottom" constant="59" id="5Me-ax-RW1"/>
+                            <constraint firstItem="cIG-c9-byT" firstAttribute="top" secondItem="eMz-Tn-qyb" secondAttribute="bottom" constant="194" id="Fw9-pF-zuP"/>
+                            <constraint firstItem="neD-SM-31o" firstAttribute="centerX" secondItem="cIG-c9-byT" secondAttribute="centerX" id="LqU-NR-6pr"/>
+                            <constraint firstItem="FBO-eX-ttO" firstAttribute="top" secondItem="neD-SM-31o" secondAttribute="bottom" constant="229" id="Ron-Mq-bCa"/>
+                            <constraint firstItem="neD-SM-31o" firstAttribute="centerX" secondItem="Psm-zE-TaC" secondAttribute="centerX" id="d78-2H-aIl"/>
+                            <constraint firstItem="cIG-c9-byT" firstAttribute="leading" secondItem="Psm-zE-TaC" secondAttribute="leading" constant="137" id="dWu-x7-86U"/>
+                            <constraint firstItem="neD-SM-31o" firstAttribute="top" secondItem="Jdj-a7-yam" secondAttribute="bottom" constant="59" id="i5Z-Rg-kga"/>
+                            <constraint firstItem="Jdj-a7-yam" firstAttribute="leading" secondItem="Psm-zE-TaC" secondAttribute="leading" constant="123" id="lY8-c7-wZc"/>
+                            <constraint firstItem="Jdj-a7-yam" firstAttribute="top" secondItem="cIG-c9-byT" secondAttribute="bottom" constant="25" id="t1m-uw-tOE"/>
+                            <constraint firstItem="neD-SM-31o" firstAttribute="centerX" secondItem="Jdj-a7-yam" secondAttribute="centerX" id="uqX-QX-t96"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scoreLabel" destination="Jdj-a7-yam" id="pEu-Ib-4S7"/>
@@ -274,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="We1-oH-19B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="-168"/>
+            <point key="canvasLocation" x="885.60000000000002" y="-168.6656671664168"/>
         </scene>
     </scenes>
     <resources>
