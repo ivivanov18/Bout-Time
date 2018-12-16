@@ -44,7 +44,7 @@
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7a-7l-Te5">
                                                         <rect key="frame" x="290" y="0.0" width="30" height="120"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="tcC-q2-oCZ"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="tcC-q2-oCZ"/>
                                                             <constraint firstAttribute="height" constant="120" id="yS9-qN-8jn"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="down_full"/>
@@ -73,7 +73,7 @@
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpv-fS-6mZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="30" id="cEl-cq-bfF"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="cEl-cq-bfF"/>
                                                                     <constraint firstAttribute="height" constant="60" id="fgr-jM-1D5"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
@@ -84,7 +84,7 @@
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s89-n4-Dmk">
                                                                 <rect key="frame" x="0.0" y="60" width="30" height="60"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="30" id="6Lo-xK-dKa"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="6Lo-xK-dKa"/>
                                                                     <constraint firstAttribute="height" constant="60" id="mv7-AO-9XH"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="down_half"/>
@@ -115,7 +115,7 @@
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHo-v1-jsh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="30" id="5k7-Sy-WU2"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="5k7-Sy-WU2"/>
                                                                     <constraint firstAttribute="height" constant="60" id="Xb5-b2-5Za"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
@@ -126,7 +126,7 @@
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-Ja-fXu">
                                                                 <rect key="frame" x="0.0" y="60" width="30" height="60"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="30" id="vHy-ph-Uyu"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="vHy-ph-Uyu"/>
                                                                     <constraint firstAttribute="height" constant="60" id="zUh-Ct-AuK"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="down_half"/>
@@ -197,10 +197,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="551-zK-15I">
-                                <rect key="frame" x="153" y="564" width="69" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="2zT-KY-6BB"/>
-                                </constraints>
+                                <rect key="frame" x="155.5" y="564" width="64.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
