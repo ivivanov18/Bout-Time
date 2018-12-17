@@ -8,8 +8,7 @@
 
 import UIKit
 
-let NUMBER_OF_ROUNDS = 2
-let NUMBER_OF_SECONDS_FOR_TIMER = 60
+
 
 struct DataEndGame{
     let numberOfRounds: Int
@@ -40,9 +39,12 @@ class ViewController: UIViewController {
     var countDownTimer: Timer!
     var totalTime: Int
     
+    let numberOfRounds = 6
+    let numberOfSecondsForTimer = 60
+    
     required init?(coder aDecoder: NSCoder) {
         do{
-            let boutGame = try BoutGame(totalRounds: NUMBER_OF_ROUNDS, timer: NUMBER_OF_SECONDS_FOR_TIMER)
+            let boutGame = try BoutGame(totalRounds: numberOfRounds, timer: numberOfSecondsForTimer)
             self.game = boutGame
             self.totalTime = boutGame.timer
             super.init(coder: aDecoder)
@@ -227,7 +229,7 @@ extension ViewController: EndGameActionsDelegate {
     func endRound(){
         // Verify answers delegate
         game.isRoundOver = true
-        if game.currentRound != NUMBER_OF_ROUNDS {
+        if game.currentRound != numberOfRounds {
             game.endGameActionsDelegate!.roundDidFinish()
         }else{
             game.endGameActionsDelegate!.gameDidFinish()
